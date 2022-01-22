@@ -10,8 +10,12 @@ def fizzbuzz(num):
 
 
 def second_largest(arr):
-    arr.sort()
-    print('Second largest number is', arr[-2])
+    for i in range(len(arr)):
+        for k in range(len(arr)):
+            if arr[i] < arr[k]:
+                arr[k], arr[i] = arr[i], arr[k]
+    print(arr[-2])
+    return arr
 
 
 def greater_than_ten(str):
@@ -31,13 +35,11 @@ def avg_of_pos(arr):
 
 
 def is_sorted(arr):
-    sorted_arr = sorted(arr, reverse=True)
-    if(sorted_arr == arr):
-        print('True')
-        return True
-    else:
-        print('False')
-        return False
+    for i in range(len(arr)):
+        for k in range(len(arr)):
+            if arr[k] > arr[i]:
+                return False
+    return True
 
 
 numbers = [56, 22, 2, 3, 6, 19, 25, 15, 50, 33, 27, 99, 85, 100, 105, 115, 157]
@@ -48,7 +50,7 @@ greater_than_ten(greaterthanten)
 greater_than_ten(lessthanten)
 
 is_sorted(numbers)
-
+# second_largest(numbers)
 
 list_of_numbers = [1, -5, 14, -10, 21, 34]
 
