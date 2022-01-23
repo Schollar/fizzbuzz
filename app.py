@@ -10,7 +10,8 @@ def fizzbuzz(num):
 
 
 def second_largest(arr):
-    first = second = 0
+    first = arr[0]
+    second = arr[1]
     for i in range(len(arr)):
         if(arr[i] > first):
             second = first
@@ -52,6 +53,7 @@ def is_sorted(arr):
     return True
 
 
+list_of_numbers = [-1, -5, -14, -10, -21, -34]
 numbers = [56, 22, 2, 3, 6, 19, 25, 15, 50, 33, 27, 99, 85, 100, 105, 115, 157]
 greaterthanten = "This is greater than ten!"
 lessthanten = "Less"
@@ -60,8 +62,7 @@ greater_than_ten(greaterthanten)
 greater_than_ten(lessthanten)
 
 is_sorted(numbers)
-second_largest(numbers)
+second_largest(list_of_numbers)
 
-list_of_numbers = [1, -5, 14, -10, 21, 34]
 
-avg_of_pos(list_of_numbers)
+# avg_of_pos(list_of_numbers)
