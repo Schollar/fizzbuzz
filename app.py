@@ -10,12 +10,22 @@ def fizzbuzz(num):
 
 
 def second_largest(arr):
+    first = second = 0
     for i in range(len(arr)):
-        for k in range(len(arr)):
-            if arr[i] < arr[k]:
-                arr[k], arr[i] = arr[i], arr[k]
-    print(arr[-2])
-    return arr
+        if(arr[i] > first):
+            second = first
+            first = arr[i]
+
+        elif(arr[i] > second and arr[i] is not first):
+            second = arr[i]
+    print("Second largest number is: ", second)
+
+    # for i in range(len(arr)):
+    #     for k in range(len(arr)):
+    #         if arr[i] < arr[k]:
+    #             arr[k], arr[i] = arr[i], arr[k]
+    # print(arr[-2])
+    # return arr[-2]
 
 
 def greater_than_ten(str):
@@ -50,7 +60,7 @@ greater_than_ten(greaterthanten)
 greater_than_ten(lessthanten)
 
 is_sorted(numbers)
-# second_largest(numbers)
+second_largest(numbers)
 
 list_of_numbers = [1, -5, 14, -10, 21, 34]
 
